@@ -25,3 +25,14 @@ if __name__ == "__main__":
     s = "abcd" #Output: "dcbabcd"
     print(f"The shortesr palindrome for {s} is: {leen_obj.shortestPalindrome(s)}")
 
+    #12. Integer to Roman: https://leetcode.com/problems/integer-to-roman/description/
+    num = 3749 #Output: "MMMDCCXLIX"
+    print(f"{num} to Roman numeral is: {leen_obj.intToRoman(num)}")
+
+    num = 58   #Output: "LVIII"
+    print(f"{num} to Roman numeral is: {leen_obj.intToRoman(num)}")
+
+    num = 1994   #Output: "MCMXCIV"
+    print(f"{num} to Roman numeral is: {leen_obj.intToRoman(num)}")
+
+
