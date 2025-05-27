@@ -109,3 +109,59 @@ class LeenCode:
                 ans = self._intToRomanCont_(v, ans,"I","V","X")
             l-=1
         return ans
+    
+    #13. Roman to Integer: https://leetcode.com/problems/roman-to-integer/description/
+    def romanToInt(self, s: str) -> int:
+        """
+        Convert a given Roman numeral to integer.
+
+        EXAMPLLE:
+
+        Input: s = "MCMXCIV"
+        Output: 1994
+        Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+        Args:
+            s (str): The Roman numeral we want we want to convert to  integer. 1 <= s.length <= 15
+                        s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
+        Returns:
+            ans (int): The converted Integer from Roman numeral.
+        """
+        dic = {"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
+        b = 0
+        ans = 0
+        for i in s[::-1]:
+            a = dic.get(i)
+            if b<=a:
+                ans+=a
+            else:
+                ans-=a
+            b = a
+        return ans
+
+    #7. Reverse Integer: https://leetcode.com/problems/reverse-integer/description/ 
+    def reverse(self, x: int) -> int:
+        """
+        Reversing digits of a signed 32-bit integer x.
+
+        Example 2:
+            Input: x = 123
+            Output: 321
+        
+        Args:
+            x (int): A signed 32-bit integer.
+        return:
+            x (int): x with its digits reversed or 0 when x reversed is outside the 
+            signed 32-bit integer range [-231, 231 - 1]   
+        """
+
+        if x>0:
+            x = str(x)[::-1]
+        else:
+            x = "-"+str(x)[1:][::-1]
+
+        if ((-2**31) < int(x) < (2**31 - 1)) :
+            return int(x)
+        else:
+            return 0
+        
