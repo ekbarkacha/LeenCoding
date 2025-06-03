@@ -49,6 +49,23 @@ if __name__ == "__main__":
     x = 120 #Output: 21
     print(f"The reversed signed 32-bit integer of {x} is: {leen_obj.reverse(x)}")
 
+    # 8. String to Integer (atoi): https://leetcode.com/problems/string-to-integer-atoi/description/
+    s = "42" #Output: 42
+    print(f"{s} to signed 32-bit integer is: {leen_obj.myAtoi(s)}")
+    s = " -042" #Output: -42
+    print(f"{s} to signed 32-bit integer is: {leen_obj.myAtoi(s)}")
+    s = "1337c0d3" #Output: 1337
+    print(f"{s} to signed 32-bit integer is: {leen_obj.myAtoi(s)}")
+    s = "0-1" #Output: 0
+    print(f"{s} to signed 32-bit integer is: {leen_obj.myAtoi(s)}")
+    s = "words and 987" #Output: 0
+    print(f"{s} to signed 32-bit integer is: {leen_obj.myAtoi(s)}")
+
+
+
+
+
+
 
 
 
